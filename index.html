@@ -2,14 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <meta name="description" content="Get durable, affordable and pratical jacekts from RainyDays">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a59324db92.js" crossorigin="anonymous"></script>
+    <title>RainyDays | Homepage</title>
 </head>
 <body>
-    <h1>Fantacy
-    </h1>
-    <p>To be continued!</p>
-    <img src="https://raw.githubusercontent.com/Noroff-FEU-Assignments/cross-course-project-hoohkostwon/354a64233410340fca7ec50c3e86cd27687f7fe0/images/self-portrait%20Van%20Gogh.jpeg?token=AX6SYPH5JVCAQK5J3AYL5IDCDX2RQ" alt="self-portrait Van Gogh">
+    <header>
+        <div class ="banner">
+            <div class="banner-content">
+               <strong>Free delivery </strong> for our members. <Strong> <a href="" id="banner-link">New collection arrivels!</a></Strong>
+            </div>
+        </div>
+        <div class="navbar">
+            <input type="checkbox" id="side-menu">
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+            <a href="index.html"><img src="images/RainyDays_Logo.png" alt="RainyDays_Logo" class="logo"></a>
+            <div class="navicons">
+                <input type="text" placeholder="SEACH..."> 
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"> <i class="fa-solid fa-bag-shopping"></i><span class="navtext"> My Bag</span></a>
+                <a href="#"> <i class="fa-solid fa-heart"></i><span class="navtext">Favourite</span></a>
+                <a href="#"> <i class="fa-solid fa-user"></i><span class="navtext">Login</span></a>
+            </div>
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li><a href="jackets.html">Our Jackets</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">Community</a></li>
+                </ul>
+            </nav>
+       </div>
+    </header>
+    <main>
+        <div class="welcome">
+            <section class="welcome-image"></section>
+            <div class="welcome-content">
+                <h1>Shop the new signature collection</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+                <a href="jackets.html" class="cta-link">Shop Now</a>
+            </div>
+        </div>
+        <div class="selling-point">
+            <img src="images/Homepage_Manandwomanrun.jpg" alt="Homepage_Manandwomanrun" class="selling-point-image">
+            <div class="selling-point-content">
+                <h1>Durable and practical jacket since 1990</h1>
+                <p> Minima earum deleniti perspiciatis molestias excepturi quos dolorem, rerum qui animi iste. </p>
+                <a href="jackets.html" class="cta-link">Shop Now</a>
+            </div>   
+        </div>
+        <div class="swipeview-products">
+            <div class="products">
+                <div class="product1">
+                     <a href="#"><img src="images/product1.png" alt="product1" class="product-image"></a>
+                     <h2>Lofoten Jacket</h2>
+                     <p>$59</p>
+                     <a href="checkout.html" class="cta-link">Quick Buy</a>
+                </div>
+                <div class="product2">
+                    <a href="#"><img src="images/product2.png" alt="product2" class="product-image"></a>
+                    <h2>Flexi Jacket</h2>
+                    <p>$49</p>
+                    <a href="checkout.html" class="cta-link">Quick Buy</a>
+                </div>
+            </div>
+            <div class="favourite">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+            </div>
+            <div class="cursor">
+                <span id="page1">.</span>
+                <span id="page2">.</span>
+                <span id="page3">.</span> 
+            </div>
+        </div>
+        <div class= "signup">
+            <video controls autoplay loop muted src="video/homepage_video.mp4" class="signupvideo">
+            </video>    
+            <div class="signup-form">
+                <h1>Join our loyalty program</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Efuga earum beatae delectus.</p>
+                <input type="email" placeholder=" YOUR EMAIL ADDRESS">
+                <a href="#" class="cta-link"> Sign Up </a>
+            </div>
+        </div>
+        <div class="company-info">
+            <div class="account"> 
+                <h3>Account</h3>
+                <ul>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Order Status</a></li>
+                </ul>
+            </div>
+            <div class="aboutus">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">History</a></li>
+                </ul>
+            </div>
+            <div class="help"> 
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Delivery Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="socialmedia"> 
+                <h3>Social Media</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <ul class="footer-list">
+            <li><a href="#">Term of us</a></li>
+            <li><a href="#">Copyright</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
