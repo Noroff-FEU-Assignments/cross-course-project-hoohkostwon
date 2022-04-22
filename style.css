@@ -1,0 +1,1280 @@
+/*** CSS Reset ***/
+
+/*Reset box-sizing and remove padding and margin for all elements*/
+
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+/*Correct the line height in all browser*/
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
+
+/*Reapply the pointer cursor and underline for anchor tags*/
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
+
+/*Remove list styles*/
+ul,
+li {
+    list-style: none;
+}
+
+/*** Default setting***/
+
+/*import fonts*/
+
+@font-face {
+    font-family: 'Expletus Sans', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+}
+
+@font-face {
+    font-family: 'Hind', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+}
+
+/*Set default body style for mobile, the screen width less than 750px */
+body {
+    font-family:'Hind', sans-serif, Verdana, Geneva, Tahoma;
+    font-size: 1rem;
+}
+
+/*Set default h1 style*/
+h1 {
+    text-transform: uppercase;
+    font-family:'Expletus Sans', cursive, 'Segoe UI', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size:1.6rem;
+    font-weight:900;
+    margin-bottom: 5%;
+}
+
+/*Set default h2 style*/
+h2 {
+    text-transform: uppercase;
+    font-family:'Expletus Sans', cursive, 'Segoe UI', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size:1.2rem;
+    font-weight: 600;
+}
+
+/*Set default h3 style*/
+h3 {
+    text-transform: capitalize;
+    font-family:'Expletus Sans', cursive, 'Segoe UI', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size:1rem;
+    font-weight: 600;
+}
+
+/*Set default .cta-link style*/
+.cta-link {
+    display: inline-block;
+    background-color: white;
+    text-transform: uppercase;
+    font-family: 'Expletus Sans', cursive, 'Segoe UI', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px 30px;
+    font-weight: 900;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 0 3px 3px lightgray;
+}
+
+.cta-link:hover {
+    background-color: lightgray;
+}
+
+/* Set banner style*/
+.banner {
+    background-color: #245A50;
+    text-transform: capitalize;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+#banner-link {
+    color: whitesmoke;
+}
+
+#banner-link:hover {
+    color: black;
+}
+
+/* Set footer style*/
+.footer {
+    background-color: #245A50;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+.footer-list li {
+    display: inline-flex;
+    padding-left: 2%;
+}
+
+.footer-list a {
+    color: whitesmoke;
+}
+
+.footer-list a:hover{
+    color: black;
+}
+
+/* Set company-info at the bottom of the page*/
+.company-info {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.account,
+.aboutus,
+.help,
+.socialmedia {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.company-info .socialmedia li {
+    display: inline-block;
+    padding: 1rem;
+}
+
+/* Set navbar style */
+.navbar { 
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Set nav menu */
+.menu {
+    grid-column: 1/4;
+    background-color: gainsboro;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    position:relative;
+}
+
+.menu li {
+    padding: 0.5rem;
+}
+
+.menu {
+    display: none;
+    transition: .3s ease-in-out;
+}
+
+/* Logo style */
+.logo {
+    height: 3rem;
+    grid-column: 2/3;
+    margin-top: 0.5rem;
+}
+
+/* Set navicons */
+.navicons {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin: auto;
+    margin-right: 5%;
+}
+
+.navicons .navtext,
+.navicons input {
+    display: none;
+}
+
+/* Set hamb-menu */
+
+.hamb {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: auto;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.hamb-line {
+    background: black;
+    display: block;
+    height: 2px;
+    width: 24px;
+    position: relative;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+    background: black;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+}
+
+.hamb-line::before{
+    top: -5px;
+}
+
+.hamb-line::after {
+    top: +5px
+}
+
+#side-menu {
+    display: none;
+}
+
+/* Checked effect/menu animation */
+#side-menu:checked ~ .hamb .hamb-line {
+    background-color: transparent;
+}
+
+#side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg); top: 5px;
+}
+
+#side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg); bottom: 5px;
+}
+
+#side-menu:checked ~  .menu {
+    display: block;
+}
+
+
+/*** Homepage ***/
+
+/* Homepage p style */
+.welcome-content p, 
+.selling-point p,
+.signup-form p {
+    padding-bottom: 1rem;
+    display: none;
+    margin-bottom: 5%;
+}
+
+/* Welcome style */
+.welcome-image {
+    background-image: url(../images/homepage_maninrain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    min-height: 55vh;
+}
+
+.welcome-content {
+    background-color:whitesmoke;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+/* Selling-point */
+
+.selling-point { 
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.selling-point-image {
+    width: 95%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* Product-list*/
+.swipeview-products {
+    width: 320px;
+    height: 500px;
+    overflow: hidden;
+    margin: 5% auto;
+    background-color: whitesmoke;
+    text-align: center;
+    position: relative;
+}
+.product-image {
+    width: 220px;
+    height: 240px;
+}
+
+.products {
+    width: 640px;
+    float: left;
+    left: 0;
+    position: relative;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.product1,
+.product2 {
+    text-align: center;
+    width: 320px;
+    padding-top: 10%;
+    float: left;
+    height: 500px;
+    position: relative;
+}
+
+.swipeview-products:hover .products {
+    left: -320px;
+} 
+
+.swipeview-products .cta-link {
+    font-size: smaller;
+}
+
+/*cursor*/
+.cursor  {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    margin: auto;
+    
+}
+
+.cursor > * {
+    color: grey;
+    font-size: 5rem;
+}
+.cursor #page1 {
+    color: #C2B32D;
+}
+
+.swipeview-products:hover #page1 {
+    color: gray;
+}
+.swipeview-products:hover #page2 {
+    color:#C2B32D;
+}
+
+/* Signup */
+.signup video {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.signup-form {
+    display: block;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 12% 5%;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.signup-form input {
+    border: none;
+    height: 24px;
+}
+
+.signup-form .cta-link {
+    background-color: #C2B32D;
+    color:white;
+    font-size: smaller;
+    border: none;
+}
+
+.signup-form .cta-link:hover {
+    background-color: grey;
+}
+
+/*** Jackets-list page***/
+
+/* Set image for page header and bottom */
+.jackets-image,
+.explore-image {
+    width: 100%;
+    margin: 2% 0;
+}
+
+/* page welcome description */
+.jacekts-description {
+    display: block;
+    text-align: center;
+    margin: 5% 2%;
+}
+
+.sort li {
+    text-transform: uppercase;
+    font-size: small;
+    list-style: none;
+    display: inline-block;
+    margin: 5% 5%;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Jacket list*/
+
+.jackets-list {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative; 
+    margin: 10% auto;
+}
+
+.jackets-list .product{
+    display: block;
+    text-align: center;
+    margin:10% auto;
+}
+
+.product .product-image {
+    width: 200px;
+    height: 240px;
+    margin-bottom: 5%;
+}
+
+.product .cta-link {
+    font-size: smaller;
+}
+
+/* product color option style */
+.product-color {
+    display: inline-block;
+    margin-bottom: 2%;
+}
+
+.product-color .red {
+    display: block;
+    width: 20px;
+    height: 5px;
+    background-color: red;
+}
+
+.product-color .green {
+    display: block;
+    width: 20px;
+    height: 5px;
+    background-color:olive;
+}
+
+.product-color .yellow {
+    display: block;
+    width: 20px;
+    height: 5px;
+    background-color:#C2B32D;
+}
+
+.product-color .grey {
+    display: block;
+    width: 20px;
+    height: 5px;
+    background-color:grey;
+}
+
+.product-color .black {
+    display: block;
+    width: 20px;
+    height: 5px;
+    background-color:black;
+}
+
+/* Explore description */
+
+.explore {
+    display: block;
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.explore p {
+    display: none;
+}
+
+/* Jackets-list page over 1000 px screen */
+
+@media screen and (min-width:1000px) {
+
+    .jackets-header {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        margin-bottom: 5%;
+    }
+
+    .jacekts-description {
+        height: 50%;
+        margin-top: 70%;
+    }
+
+    .jackets-list {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: -2%;
+    }
+
+    .explore p {
+        display: block;
+        margin-bottom: 5%;
+    }
+}
+
+/*Jackets-list page over 2000 px screen */
+@media screen and (min-width:2000px) {
+
+    .jackets-list {
+        grid-template-columns: auto auto auto;
+    }
+
+}
+
+/*** Specific product-page ***/
+
+/*Product-page*/
+.product {
+    text-align: left;
+    margin: 5% 5%;
+}
+
+.product h3,
+.product p {
+    margin-bottom: 3%;
+}
+
+.product1-images {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.product1-images img:nth-child(1) {
+    grid-column: 1/4;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.product1-images img:nth-child(2),
+.product1-images img:nth-child(3),
+.product1-images img:nth-child(4) {
+    width: 30%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.product1-description {
+    margin-top: 3%;
+}
+
+.product1-color,
+.product1-size {
+    margin-bottom: 3%;
+    vertical-align: middle;
+    font-size: smaller;
+}
+
+input[type="radio"]:checked + label {
+    border: 2px solid black;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.product label {
+    display: inline-block;
+    width:30px;
+    height:22px;
+    cursor: pointer;
+    margin-right: 2%;
+}
+
+.product1-color span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform .2s ease-in-out;
+}
+
+.product1-color .color-yellow {
+    background-color: #C2B32D;
+}
+
+.product1-color .color-green {
+    background-color: olive;
+}
+
+.product1-size label {
+    width: 30px;
+    height: 22px;
+    text-align: center;
+}
+
+.product1-quantity > * {
+    margin-top: 5%;
+    display: inline-block;
+    font-size: large;
+    color: rgb(80, 78, 78);
+    vertical-align: baseline;
+}
+
+.product1-quantity {
+    margin-bottom: 5%;
+}
+
+.quantity {
+    border: 2px solid rgb(80, 78, 78);
+    padding: 1% 10%;
+    margin-top: -2%;
+    border-radius: 5px;
+}
+
+.product1-purchase {
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    text-align: center;
+}
+
+.product1-purchase .cta-link:nth-child(1) {
+    color: white;
+    background-color: black;
+    grid-column:1/3;
+    margin-bottom: 2%;
+}
+
+.product1-purchase .cta-link:nth-child(1) {
+    color: white;
+    background-color: black;
+    grid-column:1/3;
+    margin-bottom: 2%;
+}
+
+.product1-purchase .cta-link:nth-child(1):hover {
+    background-color: grey;
+}
+
+.product1-purchase .cta-link:nth-child(2) {
+    margin-right: 1%;
+}
+
+.product1-features {
+    margin-top: 5%;
+}
+
+.product1-features .warmth {
+    display: grid;
+    background-color: grey;
+    grid-template-columns: auto auto auto auto;
+    width: 50%;
+    height: 20px;
+    margin-bottom: 3%;
+    margin-right: 5%;
+}
+
+.product1-features .water {
+    display: grid;
+    background-color: grey;
+    grid-template-columns: auto auto auto auto;
+    width: 25%;
+    height: 20px;
+    margin-bottom: 3%;
+    margin-right: 5%;
+}
+
+.product1-features .wind {
+    display: grid;
+    background-color: grey;
+    grid-template-columns: auto auto auto auto;
+    width: 80%;
+    height: 20px;
+    margin-bottom: 3%;
+    margin-right: 5%;
+}
+
+.product1-features .weight {
+    display: grid;
+    background-color: grey;
+    grid-template-columns: auto auto auto auto;
+    width: 20%;
+    height: 20px;
+    margin-bottom: 3%;
+    margin-right: 5%;
+}
+
+.membership-benefit {
+    margin-top: 5%;
+}
+
+.packing,
+.delivery,
+.finance {
+    display: inline-block;
+    padding-right: 2%;
+}
+
+.description {
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.reviews {
+    margin-bottom: 10%;
+}
+
+.reviews h2 {
+    margin-bottom: 5%;
+}
+
+.reviewer1,
+.reviewer2 {
+    background-color: lightgrey;
+    padding: 2% 2%;
+    margin-bottom: 5%;
+}
+
+/*Product-list page over 1000 px screen */
+
+@media screen and (min-width:1000px) {
+    .product {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(15 100px);
+    }
+    
+    .product1-images {
+        grid-column: 1/2;
+        grid-row: 1/5;
+    }
+
+    .product1-description {
+        grid-column: 2/3;
+        grid-row: 1/2
+    }
+
+    .product1-color {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .product1-size {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+    .product1-quantity {
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+
+    .product1-purchase {
+        grid-column: 2/3;
+        grid-row: 5/6;
+    }
+
+    .product1-features {
+        grid-column: 2/3;
+        grid-row: 6/8;
+    }
+
+    .membership-benefit {
+        grid-column: 2/3;
+        grid-row: 8/10;
+
+    }
+
+    .description {
+        grid-column: 1/2;
+        grid-row: 5/7;
+        padding-right:5%;
+    }
+
+    .reviews {
+        margin-top: 5%;
+        grid-column: 1/3;
+        grid-row: 10/14;
+
+    }
+}
+
+/*** Checkout page ***/
+.checkout h2 {
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+.checkout-content img {
+    width: 28vw;
+}
+
+.checkout-product1,
+.checkout-product2{
+    display: grid;
+    grid-template-columns: 40% 55% 5%;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: smaller;
+    margin-bottom: 5%;
+}
+
+.checkout-product1-content,
+.checkout-product2-content {
+    display: block;
+    margin: auto;
+    margin-left: 0;
+}
+    
+
+.checkout table {
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    font-size: smaller;
+    background-color: lightgrey;
+    padding:2% 2%;
+}
+
+table .order-total {
+    text-transform:uppercase;
+    font-weight: 800;
+}
+
+.customer-info {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    margin-left: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.shopping-address,
+.delivery-method {
+    margin-bottom: 3%;
+}
+
+.place-order {
+    text-align: center;
+}
+
+.place-order .cta-link {
+    background-color: black;
+    padding: 2% 20%;
+    color: white;
+}
+
+.place-order .cta-link:hover {
+    background-color: lightgray;
+    padding: 2% 20%;
+}
+
+.place-order p {
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+.place-order #term {
+    color: black;
+    text-decoration: underline;
+}
+
+@media screen and (min-width:1000px){
+
+    .checkout-content img {
+        width: 180px;
+    }
+
+    .checkout-content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .customer-info {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+
+}
+
+/*** Order-confirmation page ***/
+.order-confirmation {
+    margin-bottom: 5%;
+}
+
+.order-confirmation h2 {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.order-content {
+    display: block;
+    margin: 3% 3%;
+
+}
+
+.order-content img {
+    width: 28vw;
+}
+
+.order-description {
+    margin: 5% 2%;
+    margin-bottom: 10%;
+}
+
+@media screen and (min-width:1000px){
+
+
+    .order-content img {
+        width: 180px;
+    }
+
+    .checkout-product1-content,
+    .checkout-product2-content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .order-content {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+    
+}
+
+/*** About us page ***/
+
+.about-us-image {
+    width: 100%;
+    margin: 3% 0;
+}
+
+.about-us-description {
+    display: block;
+    text-align: center;
+    margin: 5% 3%;
+}
+
+.about-us-description p {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    text-align: left;
+}
+
+@media screen and (min-width:1000px){
+    .about-us-image {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+
+    .about-us-description {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+/*** Contact-us ***/
+
+.contact-form h2 {
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.inquiry-form {
+    display: grid;
+    background-color: whitesmoke;
+    padding: 5% 5%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.contact-form input[type = text],
+.contact-form input[type = email],
+.contact-form select,
+textarea {
+    width: 100%;
+    margin-bottom: 5%;
+    resize: vertical;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    border: none;
+}
+
+.contact-form input[type = submit] {
+    background-color: #C2B32D;
+    color: white;
+    width: 60%;
+    padding: 2% 5%;
+    border: none;
+    text-transform: uppercase;
+    margin: auto;
+}
+
+.contact-form input[type = submit]:hover {
+    background-color: lightgray;
+}
+
+@media screen and (min-width:1000px){
+    .inquiry-form {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/*** Set default style when the screen width more than 750px ***/
+
+@media screen and (min-width:750px) {
+
+    body {
+        font-size: 1.4rem;
+    }
+
+    h1 {
+        font-size:2.2rem;
+        margin-bottom: 2%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2%;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        margin-bottom: 2%;
+    }
+
+    .cta-link {
+        padding: 10px 70px;
+    }
+
+    .company-info {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /*Homepage- header*/
+    
+    .hamb {
+        display: none;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 18% 70% 12%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        height: 4rem;
+        grid-column: 1/2;
+    }
+
+    .menu {
+         display: contents;
+         grid-column: 2/3;
+
+    }
+
+    .menu li {
+         display: inline-block;
+         font-size: smaller;
+    }
+
+    .navicons {
+         grid-column: 3/4;
+         font-size: 1rem;
+    }
+
+    .active {
+        background-color: #C2B32D;
+    }
+
+    /* Welcome*/
+
+    .welcome-image {
+         display: none;
+    }
+
+    .welcome {
+         background-image: url(../images/homepage_maninrain.jpg);
+         width: 100%;
+         height: 80vh;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position-x: center;
+         position: relative;
+    }
+
+    .welcome-content p, 
+    .selling-point p,
+    .signup-form p {
+        display: block;
+        margin-bottom: 2%;
+    }
+
+
+    .welcome-content {
+        position: absolute;
+        text-align: center;
+        bottom: 20%;
+        width: 100%;
+        margin: auto;
+   } 
+
+
+    .selling-point {
+         display: flex;
+         justify-content: space-around;
+    }
+
+    .selling-point-image {
+         width: 50%;
+    }
+
+
+    /*Product-list*/
+    .swipeview-products {
+        display: none;
+    }
+
+    /*signup*/
+
+    .signup-form input {
+        font-size: large;
+        height: 3rem;
+    }
+
+    /*Jacketpage*/
+    .product1-size label {
+        width: 40px;
+        height: 45px;
+        text-align: center;
+    }
+
+    /* Contact page */
+    .contact-form input[type = text],
+    .contact-form input[type = email],
+    .contact-form select,
+    textarea,
+    .contact-form input[type = submit]  {
+     font-size: large;
+    }
+
+}
+
+@media screen and (min-width:1900px) {
+    /*Header*/
+
+    body {
+        font-size: 1.8rem;
+    }
+
+    h1 {
+        font-size:3.2rem;
+        margin-bottom: 1%;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+        margin-bottom: 1%;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+        margin-bottom: 1%;
+    }
+
+    .navbar {
+        grid-template-columns: 20% 45% 35%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .navicons * {
+        padding-right: 5px;
+        font-size: larger;
+
+    }
+    
+    .banner,
+    .footer {
+        font-size: larger;
+    }
+
+    .company-info {
+        font-size: larger;
+    }
+
+    .logo {
+        height: 8rem;
+    }
+
+    .menu {
+        font-size: larger;
+    }
+
+    .navicons .navtext {
+        display: contents;
+    }
+
+    .navicons input {
+        display: inline-block;
+    }
+
+    /*Homepage-signup*/
+    .signup {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: center;
+    }
+
+    video {
+        margin-top: -2%;
+        width: 60%;
+        order: 2;
+    }
+
+    .contact-form input[type = text],
+    .contact-form input[type = email],
+    .contact-form select,
+    textarea,
+    .contact-form input[type = submit] {
+     font-size: larger;
+    }
+
+}
